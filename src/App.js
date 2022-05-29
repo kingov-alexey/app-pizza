@@ -1,12 +1,15 @@
 //dll
 import React from 'react';
 import './scss/app.scss';
+import pizzas from './assets/pizzas.json';
 
 //my components
 import Header from './components/Header/Header';
 import Categories from './components/Categories/Categories';
 import Sort from './components/Sort/Sort';
 import PizzaBlock from './components/PizzaBlock/PizzaBlock';
+
+console.log(pizzas);
 
 function App() {
   return (
@@ -20,9 +23,9 @@ function App() {
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
-            <PizzaBlock title="Мексиканская" price={333} />
-            <PizzaBlock title="Острая" price={755} />
-            <PizzaBlock title="Сырная" price={444} />
+            {pizzas.map(obj => (
+              <PizzaBlock {...obj} />
+            ))}
           </div>
         </div>
       </div>
