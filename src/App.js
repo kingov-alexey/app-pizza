@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound/NotFound';
 
 const pizzas = [];
 
-// console.log(pizzas);
+
 
 function App() {
   const pathname = window.location.pathname;
